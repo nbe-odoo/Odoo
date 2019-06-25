@@ -6,3 +6,7 @@
 	path = dgm
 	url = https://github.com/rdeheele/dgm
 	branch = master
+[submodule "dgm2"]
+	path = dgm2
+	url = git@github.com:rdeheele/dgm.git
+	branch = master
