@@ -1,0 +1,4 @@
+[submodule "dgm3"]
+	path = dgm3
+	url = git@github.com:rdeheele/dgm.git
+	branch = master
