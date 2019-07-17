@@ -103,9 +103,11 @@
 						</div>
 						<t t-set="website_menu" t-value="request.env['website.menu'].sudo().search([('is_vertical_menu','=',True),('website_id', 'in', (False,request.website.id))],limit=1)"/>
 						<div class="te_bar_icon" t-if="website_menu">
+							<section>
 							<a href="#" class="">
 								<i class="fa fa-sliders" />
 							</a>
+							</section>
 						</div>
 						<div class="dropdown te_user_account" t-ignore="true"
 							t-if="not user_id._is_public()">
@@ -273,9 +275,11 @@
 							</div>
 							<t t-set="website_menu" t-value="request.env['website.menu'].sudo().search([('is_vertical_menu','=',True),('website_id', 'in', (False,request.website.id))],limit=1)"/>
 							<div class="te_bar_icon" t-if="website_menu">
+								<section>
 								<a href="#" class="">
 									<i class="fa fa-sliders" />
 								</a>
+								</section>
 							</div>
 							<div class="te_cart_icon_head">
 								<t t-call="theme_clarico.header_cart"></t>
@@ -533,9 +537,11 @@
 						</div>
 						<t t-set="website_menu" t-value="request.env['website.menu'].sudo().search([('is_vertical_menu','=',True),('website_id', 'in', (False,request.website.id))],limit=1)"/>
 						<div class="px-1 te_bar_icon" t-if="website_menu">
+							<section>
 								<a href="#" class="">
 									<i class="fa fa-sliders" />
 								</a>
+							</section>
 						</div>
 						<t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
 						<div class="px-1 te_pricelist" t-if="website_sale_pricelists and len(website_sale_pricelists)&gt;1">
@@ -710,9 +716,11 @@
 						</div>
 						<t t-set="website_menu" t-value="request.env['website.menu'].sudo().search([('is_vertical_menu','=',True),('website_id', 'in', (False,request.website.id))],limit=1)"/>
 						<div class="te_bar_icon" t-if="website_menu">
+							<section>
 								<a href="#" class="">
 									<i class="fa fa-sliders" />
 								</a>
+							</section>
 						</div>
 						<div class="te_header_account">
 							<div class="dropdown te_user_account" t-ignore="true"
@@ -866,9 +874,11 @@
 							</div>
 							<t t-set="website_menu" t-value="request.env['website.menu'].sudo().search([('is_vertical_menu','=',True),('website_id', 'in', (False,request.website.id))],limit=1)"/>
 							<div class="pr-1 te_bar_icon" t-if="website_menu">
+								<section>
 									<a href="#" class="">
 										<i class="fa fa-sliders" />
 									</a>
+								</section>
 							</div>
 							<div class="px-1 te_header_account">
 								<div class="dropdown te_user_account" t-ignore="true"
@@ -1035,9 +1045,11 @@
 				</div>
 				<t t-set="website_menu" t-value="request.env['website.menu'].sudo().search([('is_vertical_menu','=',True),('website_id', 'in', (False,request.website.id))],limit=1)"/>
 				<div class="te_bar_icon" t-if="website_menu">
+					<section>
 						<a href="#" class="">
 							<i class="fa fa-sliders" />
 						</a>
+					</section>
 				</div>
 				<div class="te_header_account">
 					<div class="dropdown te_user_account" t-ignore="true"

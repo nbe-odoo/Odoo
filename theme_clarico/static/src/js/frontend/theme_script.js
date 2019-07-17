@@ -9,7 +9,6 @@
 		08. Price Filter 
 		09. Theme layout
 		10. Multi Item Carousel
-		11. Compare short name
 **************************************************/
 odoo.define('theme_emipro.theme_script', function(require) {
     'use strict';
@@ -68,17 +67,17 @@ function quickview(){
         },
         _onMouseColEnter: function(ev) {
             var self = ev.currentTarget;
-            /*$(self).addClass('opacity-full');*/
+            $(self).addClass('opacity-full');
             var button_cat = $(self).find('a#btn_categary');
             button_cat.addClass('menu-cate-hover');
-            /*$('.cat-column').addClass('opacity');*/
+            $('.cat-column').addClass('opacity');
         },
         _onMouseColLeave: function(ev) {
             var self = ev.currentTarget;
             var button_cat = $(self).find('a#btn_categary');
             button_cat.removeClass('menu-cate-hover');
-           /* $('.cat-column').removeClass('opacity');*/
-           /* $(self).removeClass('opacity-full');*/
+            $('.cat-column').removeClass('opacity');
+            $(self).removeClass('opacity-full');
         },
     });
 }
@@ -238,8 +237,8 @@ function quickview(){
     sAnimations.registry.websiteSaleCategory.include({
     	selector: '.oe_website_sale',
         read_events: {
-            'click #o_shop_collapse_category .fa-chevron-right': '_onOpenClick',
-            'click #o_shop_collapse_category .fa-chevron-down': '_onCloseClick',
+            'click .fa-chevron-right': '_onOpenClick',
+            'click .fa-chevron-down': '_onCloseClick',
         },
         _onOpenClick: function (ev) {
             var $fa = $(ev.currentTarget);
@@ -345,7 +344,8 @@ function quickview(){
             $(self).find(".oe_product_image").css("opacity", "1");
 		}
         },
-        _onIcons: function(ev){ 
+        _onIcons: function(ev){
+            console.log("click")
             var self = ev.currentTarget;
             if ($(window).width() > 1200) {
             $(self).find(".product_price").removeClass("bottom_animation")
@@ -1103,35 +1103,4 @@ function quickview(){
             });
         });
     })
-    //------------------------------------------
-    // 11. Compare short name
-    //------------------------------------------
-    $(document).ready(function(){
-    
-        var maxLength = 26;
-        var ellipsestext = "...";
-        var moretext = "More";
-        var lesstext = "less";
-        $(".more").each(function(){
-            var myStr = $(this).text();
-            if($.trim(myStr).length > maxLength){
-                var newStr = myStr.substring(0, maxLength);
-                var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
-                var html = newStr + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + removedStr + '</span>&nbsp;&nbsp;<a href="" class="read-more">' + moretext + '</a></span>';
-                $(this).html(html);
-            }
-        });
-        $(".read-more").click(function(){
-        if($(this).hasClass("less")) {
-            $(this).removeClass("less");
-            $(this).html(moretext);
-        } else {
-            $(this).addClass("less");
-            $(this).html(lesstext);
-        }
-        $(this).parent().prev().toggle();
-        $(this).prev().toggle();
-        return false;
-        });
-    });
 });
