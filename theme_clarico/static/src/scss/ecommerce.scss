@@ -1370,23 +1370,6 @@ body.editor_enable
 	display:inline-block;
 
 }
-/*
-.more .more-text{
-	display: none;
-}
-*/
-.morecontent span {
-    display: none;
-}
-.morelink {
-    display: block;
-}
-.read-more:hover{
-	color:#868e96;
-}
-.read-more .less{
-	color:#868e96;	
-}
 .recom_prod_heading{
 	padding-bottom:10px;
 }
@@ -2663,11 +2646,9 @@ h1.te_product_name
     margin: 8px 0 8px 0 !important;
 }
 /*-----------to toggle between show more link------------*/
-/*
 .morecontent {
     display: none;
 }
-*/
 .morelink {
     text-decoration: underline;
 }

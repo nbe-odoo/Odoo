@@ -144,15 +144,7 @@ INDEX:
 	    	}
 	    }
 }
-.te_menu_style_2 
-{
-	.te_btn_category:hover{
-		color:nth($f_color,19);
-	}
-	.te_hover:hover{
-		color:nth($f_color,19);	
-	}
-}
+
 .te_btn_category_bottom {
 	@include position(relative)
 	@include style(18,3,inherit)
@@ -236,11 +228,7 @@ INDEX:
 	{
 		.te_megamenu_service_heading,.category-heading-center p,.cat-column p
 		{
-			@include style(2,3)
-		}
-		.te_menu_style_2 .cat-column section a p{
-			padding-bottom:6px !important;
-			padding-top:0px !important;
+			@include style(3,3)
 		}
 	}
 .te_megamenu_service_content_heading {
@@ -1039,8 +1027,7 @@ header
 				border: none !important;
 				padding: 0;
 				text-transform: capitalize !important;
-				@include style(2,3)
-				padding-bottom: 6px;
+				@include style(3,3)
 				&:before
 				{
 					content:none;

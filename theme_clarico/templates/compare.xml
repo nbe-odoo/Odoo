@@ -49,7 +49,7 @@
 		<xpath expr="//div[hasclass('product_summary')]/a[hasclass('o_product_comparison_table')]" position="replace">
 			<div id="read_more">
 				<a class="o_product_comparison_table product_name_compare d-inline-block" t-attf-href="/shop/product/#{ slug(product.product_tmpl_id) }">
-	               	<span class="more"  t-field='product.display_name'></span>
+	               	<span class="more"  t-field='product.display_name'></span><br/>
 	            </a>
 			</div>
 		</xpath>
