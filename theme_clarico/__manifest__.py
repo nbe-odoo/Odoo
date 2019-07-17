@@ -4,7 +4,7 @@
     'name': 'Theme Clarico',
     'category': 'Theme/eCommerce',
     'summary': 'Fully Responsive Odoo Theme suitable for eCommerce Businesses',
-    'version': '12.0.0.38',
+    'version': '12.0.0.39',
     'license': 'OPL-1',	
     'depends': [
         'emipro_theme_base',       
